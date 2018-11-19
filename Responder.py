@@ -6,7 +6,7 @@ class Responder:
         self.fillResponses()
 
     def generateResponse(self):
-        index = random.randint(0, len(self.responses))
+        index = random.randint(0, len(self.responses)-1)
         return self.responses[index]
 
     def fillResponses(self):
