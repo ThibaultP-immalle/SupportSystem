@@ -14,12 +14,13 @@ class SupportSystem:
         while not finished:
             user_input = self.reader.getInput()
 
-            if user_input.startswith('bye'):
+            if 'bye' in user_input:
                 finished = True
-                self.printGoodbye()
             else:
-                response = self.responder.generateResponse()
+                response = self.responder.generateResponse(user_input)
                 print(response)
+
+        self.printGoodbye()
 
     def printWelcome(self):
         print("Welcome to the Tech Support!")
